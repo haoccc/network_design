@@ -261,5 +261,5 @@ if __name__ == '__main__':
 
     # # 提交即保存到数据库:
     # session.commit()
-    # # 关闭session:
-    # session.close()
+    # 关闭session:
+    session.close()
