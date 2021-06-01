@@ -106,6 +106,7 @@ class GetAndSave:
     def __init__(self, file_path, session: sqlalchemy.orm.session.Session):
         self.file = open(file_path, "rb")
         self.data_json = json.load(self.file)  # 加载数据
+        # print(self.data_json)
         self.data = self.data_json["data"]  # 视频数据数据信息
         self.session = session
         # 多个用户信息列表  多个视频信息列表
