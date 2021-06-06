@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>layout 管理系统大布局 - Layui</title>
   <link rel="stylesheet" href="../static/layui/css/layui.css">
+   <script src="echarts.min.js"></script>
 </head>
 <body>
 <div class="layui-layout layui-layout-admin">
@@ -77,8 +78,11 @@
   </div>
 
   <div class="layui-body">
-    <!-- 内容主体区域 -->
-    <div style="padding: 15px;">内容主体区域。记得修改 layui.css 和 js 的路径</div>
+
+    <div style="padding: 15px;">内容主体区域。记得修改 layui.css 和 js 的路径
+    <div id="main" style="width: 600px;height:400px;"></div>
+    </div>
+
   </div>
 
   <div class="layui-footer">
@@ -89,6 +93,8 @@
 <script src="../static/layui/layui.js"></script>
 <script>
 //JS
+import * as echarts from "../static/apache-echarts-5.1.1-src/src/chart/tree/layoutHelper";
+
 layui.use(['element', 'layer', 'util'], function(){
   var element = layui.element
   ,layer = layui.layer
@@ -114,6 +120,33 @@ layui.use(['element', 'layer', 'util'], function(){
   });
 
 });
+
+// 基于准备好的dom，初始化echarts实例
+        var myChart =
+                charts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
 </script>
 </body>
 </html>

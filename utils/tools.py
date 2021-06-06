@@ -107,7 +107,10 @@ class DataVisualization:
         query = "select count(*) from author_info where birthday < '1980-01-01'"
         cursor = self.session.execute(query)
         count_70 = cursor.fetchall()[0][0]
-        return [count_00, count_90, count_80, count_70]
+        # todo
+        # 没有生日的用户
+        others = self.get_user_count() - sum([count_00, count_90, count_80, count_70])
+        return [count_00, count_90, count_80, count_70, others]
 
     def get_city_distribution(self):
         """
@@ -162,8 +165,8 @@ class DataVisualization:
 if __name__ == '__main__':
     print(get_city(440100))
     xx = DataVisualization()
-    xx.get_user_count()
-    print(xx.get_age_distribution())
-    xx.get_city_distribution()
-    xx.get_post_time_distribution()
+    print("用户数量：", xx.get_user_count())
+    print("年龄分布：", xx.get_age_distribution())
+    print("城市分布", xx.get_city_distribution() )
+    print("发布时间分布", xx.get_post_time_distribution())
     xx.session_close()
