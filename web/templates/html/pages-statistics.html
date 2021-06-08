@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../../static/images/favicon.png">
+    <title>Home</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="../../static/morrisjs/morris.css" rel="stylesheet">
+    <!--c3 CSS -->
+    <link href="../../static/c3-master/c3.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../../static/css/style.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="../../static/css/pages/dashboard1.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="../../static/css/colors/default.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+<!-- ============================================================== -->
+<!-- Preloader - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div class="preloader">
+    <div class="loader">
+        <div class="loader__figure"></div>
+        <p class="loader__label">Admin Wrap</p>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-light">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <!-- Logo icon --><b>
+                    <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                    <!-- Dark Logo icon -->
+                    <img src="../../static/images/logo-icon.png" alt="homepage" class="dark-logo"/>
+                    <!-- Light Logo icon -->
+                    <img src="../../static/images/logo-light-icon.png" alt="homepage" class="light-logo"/>
+                </b>
+                    <!--End Logo icon -->
+                    <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="../../static/images/logo-text.png" alt="homepage" class="dark-logo"/>
+                    <!-- Light Logo text -->
+                         <img src="../../static/images/logo-light-text.png" class="light-logo" alt="homepage"/></span>
+                </a>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-collapse">
+                <!-- ============================================================== -->
+                <!-- toggle and nav items -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark"
+                                            href="javascript:void(0)"><i class="fa fa-bars"></i></a></li>
+                    <!-- ============================================================== -->
+                    <!-- Search -->
+                    <!-- ============================================================== -->
+                    <li class="nav-item hidden-xs-down search-box"><a
+                            class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i
+                            class="fa fa-search"></i></a>
+                        <form class="app-search">
+                            <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i
+                                class="fa fa-times"></i></a></form>
+                    </li>
+                </ul>
+                <!-- ============================================================== -->
+                <!-- User profile and search -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav my-lg-0">
+                    <!-- ============================================================== -->
+                    <!-- Profile -->
+                    <!-- ============================================================== -->
+                    <li class="nav-item dropdown u-pro">
+                        <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href=""
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                                src="../assets/images/users/1.jpg" alt="user" class=""/> <span class="hidden-md-down">Mark Sanders &nbsp;</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ============================================================== -->
+    <!-- End Topbar header -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <li><a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i
+                            class="fa fa-tachometer"></i><span class="hide-menu">网页小抖音</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="pages-statistics.html" aria-expanded="false"><i
+                            class="fa fa-user-circle-o"></i><span class="hide-menu">统计</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><i
+                            class="fa fa-table"></i><span class="hide-menu">Tables</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="icon-fontawesome.html" aria-expanded="false"><i
+                            class="fa fa-smile-o"></i><span class="hide-menu">Icons</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i
+                            class="fa fa-globe"></i><span class="hide-menu">Map</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i
+                            class="fa fa-bookmark-o"></i><span class="hide-menu">Blank</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i
+                            class="fa fa-question-circle"></i><span class="hide-menu">404</span></a>
+                    </li>
+                </ul>
+                <div class="text-center m-t-30">
+                    <a href="#" class="btn waves-effect waves-light btn-info hidden-md-down"> Upgrade to Pro</a>
+                </div>
+            </nav>
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+    </aside>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="row page-titles">
+                <div class="col-md-5 align-self-center">
+                    <h3 class="text-themecolor">数据板</h3>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                </div>
+                <div class="col-md-7 align-self-center">
+                    <a href="#" class="btn waves-effect waves-light btn btn-info pull-right hidden-sm-down"> Upgrade to
+                        Pro</a>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Sales Chart and browser state-->
+            <!-- ============================================================== -->
+            <div class="row">
+                <!-- Column -->
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div id="age_dis" style="width: 500px;height:500px;"></div>
+                    </div>
+                </div>
+                <!-- Column -->
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div id="gender_dis" style="width: 500px;height:500px;"></div>
+                        <!--                        <div class="card-body">-->
+                        <!--                            <div class="d-flex m-b-30 no-block">-->
+                        <!--                                <h5 class="card-title m-b-0 align-self-center">Our Visitors</h5>-->
+                        <!--                                <div class="ml-auto">-->
+                        <!--                                    <select class="custom-select b-0">-->
+                        <!--                                        <option selected="">Today</option>-->
+                        <!--                                        <option value="1">Tomorrow</option>-->
+                        <!--                                    </select>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                            <div id="visitor" style="height:260px; width:100%;"></div>-->
+                        <!--                            <ul class="list-inline m-t-30 text-center font-12">-->
+                        <!--                                <li><i class="fa fa-circle text-purple"></i> Tablet</li>-->
+                        <!--                                <li><i class="fa fa-circle text-success"></i> Desktops</li>-->
+                        <!--                                <li><i class="fa fa-circle text-info"></i> Mobile</li>-->
+                        <!--                            </ul>-->
+                        <!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Sales Chart -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Projects of the Month -->
+            <!-- ============================================================== -->
+            <div class="row">
+                <!-- Column -->
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div id="post_time_dis" style="width: 100%;height:500px;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Projects of the Month -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Notification And Feeds -->
+            <!-- ============================================================== -->
+            <div class="row">
+                <!-- Start Notification -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="card card-body mailbox">
+                        <h5 class="card-title">Notification</h5>
+                        <div class="message-center ps ps--theme_default ps--active-y"
+                             data-ps-id="a045fe3c-cb6e-028e-3a70-8d6ff0d7f6bd">
+                            <!-- Message -->
+                            <a href="#">
+                                <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
+                                <div class="mail-contnet">
+                                    <h5>Luanch Admin</h5> <span class="mail-desc">Just see the my new admin!</span>
+                                    <span class="time">9:30 AM</span></div>
+                            </a>
+                            <!-- Message -->
+                            <a href="#">
+                                <div class="btn btn-success btn-circle"><i class="fa fa-calendar-check-o"></i></div>
+                                <div class="mail-contnet">
+                                    <h5>Event today</h5> <span
+                                        class="mail-desc">Just a reminder that you have event</span> <span class="time">9:10 AM</span>
+                                </div>
+                            </a>
+                            <!-- Message -->
+                            <a href="#">
+                                <div class="btn btn-info btn-circle"><i class="fa fa-cog"></i></div>
+                                <div class="mail-contnet">
+                                    <h5>Settings</h5> <span class="mail-desc">You can customize this template as you want</span>
+                                    <span class="time">9:08 AM</span></div>
+                            </a>
+                            <!-- Message -->
+                            <a href="#">
+                                <div class="btn btn-primary btn-circle"><i class="fa fa-user"></i></div>
+                                <div class="mail-contnet">
+                                    <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span
+                                        class="time">9:02 AM</span></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Notification -->
+                <!-- Start Feeds -->
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Feeds</h5>
+                            <ul class="feeds">
+                                <li>
+                                    <div class="bg-light-info"><i class="fa fa-bell-o"></i></div>
+                                    You have 4 pending tasks. <span class="text-muted">Just Now</span></li>
+                                <li>
+                                    <div class="bg-light-success"><i class="fa fa-server"></i></div>
+                                    Server #1 overloaded.<span class="text-muted">2 Hours ago</span></li>
+                                <li>
+                                    <div class="bg-light-warning"><i class="fa fa-shopping-cart"></i></div>
+                                    New order received.<span class="text-muted">31 May</span></li>
+                                <li>
+                                    <div class="bg-light-danger"><i class="fa fa-user"></i></div>
+                                    New user registered.<span class="text-muted">30 May</span></li>
+                                <li>
+                                    <div class="bg-light-inverse"><i class="fa fa-bell-o"></i></div>
+                                    New Version just arrived. <span class="text-muted">27 May</span></li>
+                                <li>
+                                    <div class="bg-light-info"><i class="fa fa-bell-o"></i></div>
+                                    You have 4 pending tasks. <span class="text-muted">Just Now</span></li>
+                                <li>
+                                    <div class="bg-light-danger"><i class="fa fa-user"></i></div>
+                                    New user registered.<span class="text-muted">30 May</span></li>
+                                <li>
+                                    <div class="bg-light-inverse"><i class="fa fa-bell-o"></i></div>
+                                    New Version just arrived. <span class="text-muted">27 May</span></li>
+                                <li>
+                                    <div class="bg-light-primary"><i class="fa fa-cog"></i></div>
+                                    You have 4 pending tasks. <span class="text-muted">27 May</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Feeds -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Notification And Feeds -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- End Page Content -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer">Copyright &copy; 2019.Company name All rights reserved.<a target="_blank"
+                                                                                         href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="../../static/jquery/jquery.min.js"></script>
+<!-- Bootstrap popper Core JavaScript -->
+<script src="../../static/bootstrap/js/popper.min.js"></script>
+<script src="../../static/bootstrap/js/bootstrap.min.js"></script>
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="../../static/js/perfect-scrollbar.jquery.min.js"></script>
+<!--Wave Effects -->
+<script src="../../static/js/waves.js"></script>
+<!--Menu sidebar -->
+<script src="../../static/js/sidebarmenu.js"></script>
+<!--Custom JavaScript -->
+<script src="../../static/js/custom.min.js"></script>
+<!-- ============================================================== -->
+<!-- This page plugins -->
+<!-- ============================================================== -->
+<!--morris JavaScript -->
+<script src="../../static/raphael/raphael-min.js"></script>
+<script src="../../static/morrisjs/morris.min.js"></script>
+<!--c3 JavaScript -->
+<script src="../../static/d3/d3.min.js"></script>
+<script src="../../static/c3-master/c3.min.js"></script>
+<!-- Chart JS -->
+<script src="../../static/js/dashboard1.js"></script>
+<script src="../../static/echarts.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $.get("http://127.0.0.1:5000/statistics", function (data, status) {
+            // alert("数据: " + data + "\n状态: " + status);
+            if (status == "success") {
+                alert("ok");
+                user_count = data["用户数量"];
+                age_distribution = data["年龄分布"];
+                post_time_distribution = data["发布时间分布"];
+                gender_distribution = data["性别比例"]
+                // alert(gender_distribution[0])
+                video_count = data["视频数量"];
+                city_distribution = data["城市分布"];
+
+                // 用户年龄分布
+                age_dis = {
+                    title: {
+                        text: '用户年龄分布'
+                    },
+                    legend: {
+                        top: 'bottom'
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: {show: true},
+                            dataView: {show: true, readOnly: false},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    series: [
+                        {
+                            name: '面积模式',
+                            type: 'pie',
+                            radius: [50, 170],
+                            center: ['50%', '50%'],
+                            roseType: 'area',
+                            itemStyle: {
+                                borderRadius: 5
+                            },
+                            data: [
+                                {value: age_distribution[0], name: '00后'},
+                                {value: age_distribution[1], name: '90后'},
+                                {value: age_distribution[2], name: '80后'},
+                                {value: age_distribution[3], name: '60/70后'},
+                                {value: age_distribution[4], name: '其他'}
+                            ]
+                        }
+                    ]
+                };
+                echarts.init(document.getElementById('age_dis')).setOption(age_dis);
+
+                //性别比例
+                gender_dis = {
+                    title: {
+                        text: '性别比例',
+                        // left: 'center'
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: '{b} : {c} ({d}%)'
+                    },
+                    legend: {
+                        bottom: 10,
+                        left: 'center',
+                        data: ['无性别', '男', '女']
+                    },
+                    series: [
+                        {
+                            type: 'pie',
+                            radius: '65%',
+                            center: ['50%', '50%'],
+                            selectedMode: 'single',
+                            data: [
+                                {value: gender_distribution[0], name: '无性别'},
+                                {value: gender_distribution[1], name: '男'},
+                                {value: gender_distribution[2], name: '女'}
+                            ],
+                            emphasis: {
+                                itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            }
+                        }
+                    ]
+
+                }
+                echarts.init(document.getElementById('gender_dis')).setOption(gender_dis);
+
+                //发帖时间分布
+                post_time_dis = {
+                    title: {
+                        text: '发帖时间分布',
+                        // subtext: '纯属虚构'
+                    },
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross'
+                        }
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            saveAsImage: {}
+                        }
+                    },
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23']
+                    },
+                    yAxis: {
+                        type: 'value',
+                        axisLabel: {
+                            formatter: '{value} W'
+                        },
+                        axisPointer: {
+                            snap: true
+                        }
+                    },
+                    visualMap: {
+                        show: false,
+                        dimension: 0,
+                        pieces: [{
+                            lte: 6,
+                            color: 'green'
+                        }, {
+                            gt: 6,
+                            lte: 8,
+                            color: 'red'
+                        }, {
+                            gt: 8,
+                            lte: 14,
+                            color: 'green'
+                        }, {
+                            gt: 14,
+                            lte: 17,
+                            color: 'red'
+                        }, {
+                            gt: 17,
+                            color: 'green'
+                        }]
+                    },
+                    series: [
+                        {
+                            name: '用电量',
+                            type: 'line',
+                            smooth: true,
+                            data: [post_time_distribution[0], post_time_distribution[1], post_time_distribution[2], post_time_distribution[3], post_time_distribution[4], post_time_distribution[5], post_time_distribution[6], post_time_distribution[7], post_time_distribution[8], post_time_distribution[9], post_time_distribution[10], post_time_distribution[11], post_time_distribution[12], post_time_distribution[13], post_time_distribution[14], post_time_distribution[15], post_time_distribution[16], post_time_distribution[17], post_time_distribution[18] post_time_distribution[19], post_time_distribution[20], post_time_distribution[21], post_time_distribution[22], post_time_distribution[23]],
+                        }
+                    ]
+
+                }
+                echarts.init(document.getElementById('post_time_dis')).setOption(post_time_dis);
+
+
+
+            }
+        });
+    });
+</script>
+</body>
+
+</html>

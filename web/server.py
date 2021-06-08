@@ -6,6 +6,7 @@ from sqlalchemy.orm import sessionmaker
 
 from utils.main import get_json_interface   # 获取给定关键词视频
 from utils.main import GetAndSave   # 获取给定关键词视频
+from utils.tools import *
 from flask_cors import CORS  # pip install flask_cors
 from flask import Flask, request, render_template, redirect, session
 
@@ -127,6 +128,30 @@ def search_video():
     return None
 
 
+@app.route('/statistics/', methods=['GET', 'POST'])
+def statistics():
+    query_obj = DataVisualization(session)
+    user_count = query_obj.get_user_count()     # 用户数量
+    age_distribution = query_obj.get_age_distribution()     # 年龄分布
+    post_time_distribution = query_obj.get_post_time_distribution()     # 发布时间分布
+    gender_distribution = query_obj.get_gender_distribution()
+
+    video_count = query_obj.get_video_count()   # 视频数量
+    city_distribution = query_obj.get_city_distribution()   # 城市分布
+    print("用户数量：", xx.get_user_count())
+    print("年龄分布：", xx.get_age_distribution())
+    print("城市分布", xx.get_city_distribution())
+    print("发布时间分布", xx.get_post_time_distribution())
+    result = {
+        "用户数量": user_count,
+        "年龄分布": age_distribution,
+        "发布时间分布": post_time_distribution,
+        "性别比例": gender_distribution,
+        "视频数量": video_count,
+        "城市分布": city_distribution
+    }
+    print(result)
+    return result
 
 
 if __name__ == '__main__':

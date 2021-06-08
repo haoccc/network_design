@@ -83,6 +83,19 @@ class DataVisualization:
         self.video_count = result
         return result
 
+    def get_gender_distribution(self):
+        """
+        性别数量
+        :return:
+        """
+        query = "select count(*) from author_info group by gender;"
+        cursor = self.session.execute(query)
+        gender_count = cursor.fetchall()
+        gender_count = [i[0] for i in gender_count]
+        # print(gender_count)
+        return gender_count
+
+
     def get_age_distribution(self):
         """
         00、90、80、70及以前个年龄段人数
@@ -120,10 +133,10 @@ class DataVisualization:
         """
         if self.video_count == 0:  # 先确定视频总数
             self.get_video_count()
-        query = "select city, count(*) from video_info group by city desc limit 10"  # 城市编号 对应数目
+        query = "select city, count(*) as a from video_info group by city desc order by a desc limit 10;"  # 城市编号 对应数目
         cursor = self.session.execute(query)
         result = cursor.fetchall()  # [(city_code, count), (city_code, count), (city_code, count)````]
-
+        # print(result)
         other_count = self.get_video_count() - sum([i[1] for i in result])  # 其他城市的数量 内置函数+列表推导式
         # print("other", other_count)
 
@@ -161,6 +174,9 @@ class DataVisualization:
         """
         self.session.close()
 
+    def session_commit(self):
+        self.session.commit()
+
 
 if __name__ == '__main__':
     print(get_city(440100))
@@ -169,4 +185,5 @@ if __name__ == '__main__':
     print("年龄分布：", xx.get_age_distribution())
     print("城市分布", xx.get_city_distribution() )
     print("发布时间分布", xx.get_post_time_distribution())
+    print("性别比例：", xx.get_gender_distribution())
     xx.session_close()
