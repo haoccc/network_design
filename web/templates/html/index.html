@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../../static/images/favicon.png">
+    <title>Home</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="../../static/morrisjs/morris.css" rel="stylesheet">
+    <!--c3 CSS -->
+    <link href="../../static/c3-master/c3.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../../static/css/style.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="../../static/css/pages/dashboard1.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="../../static/css/colors/default.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style>
+    video {
+        background-color: black;
+        /*border:10px solid white;*/
+    }
+</style>
+<body class="fix-header fix-sidebar card-no-border">
+<!-- ============================================================== -->
+<!-- Preloader - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div class="preloader">
+    <div class="loader">
+        <div class="loader__figure"></div>
+        <p class="loader__label">Admin Wrap</p>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-light">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <!-- Logo icon --><b>
+                    <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                    <!-- Dark Logo icon -->
+                    <img src="../../static/images/logo-icon.png" alt="homepage" class="dark-logo"/>
+                    <!-- Light Logo icon -->
+                    <img src="../../static/images/logo-light-icon.png" alt="homepage" class="light-logo"/>
+                </b>
+                    <!--End Logo icon -->
+                    <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="../../static/images/logo-text.png" alt="homepage" class="dark-logo"/>
+                    <!-- Light Logo text -->
+                         <img src="../../static/images/logo-light-text.png" class="light-logo" alt="homepage"/></span>
+                </a>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-collapse">
+                <!-- ============================================================== -->
+                <!-- toggle and nav items -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark"
+                                            href="javascript:void(0)"><i class="fa fa-bars"></i></a></li>
+                    <!-- ============================================================== -->
+                    <!-- Search -->
+                    <!-- ============================================================== -->
+                    <li class="nav-item hidden-xs-down search-box"><a
+                            class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i
+                            class="fa fa-search"></i></a>
+                        <form class="app-search">
+                            <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i
+                                class="fa fa-times"></i></a></form>
+                    </li>
+                </ul>
+                <!-- ============================================================== -->
+                <!-- User profile and search -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav my-lg-0">
+                    <!-- ============================================================== -->
+                    <!-- Profile -->
+                    <!-- ============================================================== -->
+                    <li class="nav-item dropdown u-pro">
+                        <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href=""
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                                src="../../static/images/users/1.jpg" alt="user" class=""/> <span
+                                class="hidden-md-down">Mark Sanders &nbsp;</span> </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ============================================================== -->
+    <!-- End Topbar header -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <li><a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i
+                            class="fa fa-tachometer"></i><span class="hide-menu">网页小抖音</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="pages-profile.html" aria-expanded="false"><i
+                            class="fa fa-user-circle-o"></i><span class="hide-menu">Profile</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><i
+                            class="fa fa-table"></i><span class="hide-menu">Tables</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="icon-fontawesome.html" aria-expanded="false"><i
+                            class="fa fa-smile-o"></i><span class="hide-menu">Icons</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i
+                            class="fa fa-globe"></i><span class="hide-menu">Map</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i
+                            class="fa fa-bookmark-o"></i><span class="hide-menu">Blank</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i
+                            class="fa fa-question-circle"></i><span class="hide-menu">404</span></a>
+                    </li>
+                </ul>
+                <div class="text-center m-t-30">
+                    <a href="#" class="btn waves-effect waves-light btn-info hidden-md-down"> Upgrade to Pro</a>
+                </div>
+            </nav>
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+    </aside>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="row page-titles">
+                <div class="col-md-5 align-self-center">
+                    <h3 class="text-themecolor">网页小抖音</h3>
+<!--                    <ol class="breadcrumb">-->
+<!--                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>-->
+<!--                        <li class="breadcrumb-item active">Dashboard</li>-->
+<!--                    </ol>-->
+                </div>
+                <div class="col-md-7 align-self-center">
+<!--                   <p>-->
+<!--                        <input type="text" placeholder="123 456 7890" class="form-control form-control-line">-->
+<!--                    <a href="#" class="btn waves-effect waves-light btn btn-info pull-right hidden-sm-down"> Upgrade to-->
+<!--                        Pro</a>-->
+<!--                   </p>-->
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="keyword">
+                            <span class="input-group-btn">
+                                <button class="btn  hidden-sm-down" type="button" id="search">
+                                    Go!
+                                </button>
+                            </span>
+                        </div><!-- /input-group -->
+			        </div><!-- /.col-lg-6 -->
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Sales Chart and browser state-->
+            <!-- ============================================================== -->
+
+            <!--                todo-->
+
+            <div class="row" id="video_content">
+<!--                <div class="col-lg-1"></div>-->
+                <div class="col-lg-12" id="result_show">
+                    <div class="jumbotron">
+                        <div class="container">
+<!--                            <h1>视频</h1>-->
+                            <table class="table" id="this_here">
+                                <tbody id="table_video">
+                                 <tr>
+                                    <td> <video width="200" height="300" controls="controls" id="video" preload="auto">
+                                     <source src="../../../video/6667113483756162312.mp4" type="video/mp4">
+                                 </video></td>
+                                    <td> <video width="200" height="300" controls="controls" id="video" preload="auto">
+                                     <source src="../../../video/6738545054211673348.mp4" type="video/mp4">
+                                 </video></td>
+                                    <td> <video width="200" height="300" controls="controls" id="video" preload="auto">
+                                     <source src="../../../video/6717159061646789901.mp4" type="video/mp4">
+                                 </video></td>
+                                    <td> <video width="200" height="300" controls="controls" id="video" preload="auto">
+                                     <source src="../../../video/6872922006480817411.mp4" type="video/mp4">
+                                 </video></td>
+                                    <td> <video width="200" height="300" controls="controls" id="video" preload="auto">
+                                     <source src="../../../video/6949090935561129246.mp4" type="video/mp4">
+                                 </video></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--                todo-->
+
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer">Copyright &copy; 2019.Company name All rights reserved.<a target="_blank"
+                                                                                             href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../../static/jquery/jquery.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="../../static/bootstrap/js/popper.min.js"></script>
+    <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="../../static/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="../../static/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../../static/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../../static/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="../../static/raphael/raphael-min.js"></script>
+    <script src="../../static/morrisjs/morris.min.js"></script>
+    <!--c3 JavaScript -->
+    <script src="../../static/d3/d3.min.js"></script>
+    <script src="../../static/c3-master/c3.min.js"></script>
+    <!-- Chart JS -->
+    <script src="../../static/js/dashboard1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $.post("http://127.0.0.1:5000/video_show", {offset: 130, count: 40} , function(data,status){
+			        // alert("数据: " + data + "\n状态: " + status);
+                if(status == "success"){
+                    // alert("ok")
+                    var result = data.split(',');
+                    var len = result.length;
+                    var count = 0
+                    // result[len - 2] 循环次数
+                    //  result[len - 1] 余数
+                    // alert(result[len - 2] - 1)
+                    for(var n = 0; n < result[len - 2]; n ++){
+                        // alert(111);
+                        var string_append = "<tr>";
+                        for(var i = 0; i < 5; i++){
+                            string_append += "<td> <video width=\"200\" height=\"300\" controls=\"controls\" preload=\"auto\">\n" +
+                                "                                     <source src=\"" + result[count] + "\" type=\"video/mp4\">\n" +
+                                "                                 </video></td>";
+                            count ++;
+                        }
+                        string_append += "</tr>"
+                        console.log(string_append);
+                        // alert(string_append);
+                        $("#table_video").append(string_append);
+
+                    }
+                }
+		        });
+        });
+
+        // 调用接口获取视频
+        function get_video(offset, count){
+            $.post("http://127.0.0.1:5000/video_show", {offset: offset, count: count} , function(data,status){
+			        // alert("数据: " + data + "\n状态: " + status);
+                if(status == "success"){
+                    // alert("ok")
+                    if(data == "到底了"){
+                        alert(data);
+                        return 0;
+                    }
+                    var result = data.split(',');
+                    var len = result.length;
+                    var count = 0
+                    // result[len - 2] 循环次数
+                    //  result[len - 1] 余数
+                    // alert(result[len - 2] - 1)
+                    for(var n = 0; n < result[len - 2]; n ++){
+                        // alert(111);
+                        var string_append = "<tr>";
+                        for(var i = 0; i < 5; i++){
+                            string_append += "<td> <video width=\"200\" height=\"300\" controls=\"controls\" preload=\"auto\">\n" +
+                                "                                     <source src=\"" + result[count] + "\" type=\"video/mp4\">\n" +
+                                "                                 </video></td>";
+                            count ++;
+                        }
+                        string_append += "</tr>"
+                        console.log(string_append);
+                        // alert(string_append);
+                        $("#table_video").append(string_append);
+
+                    }
+                }
+		        });
+        }
+        var offset = 0;
+        var count = 30;
+        // 滑动到页面低端触发事件
+        $(window).scroll(function () {
+        //如果窗口划过的距离等于  页面高度减窗口高度   就说明已经到底部了
+            if ($(window).scrollTop() > $(document).height() - $(window).height() -1) {
+                //alert
+                get_video(offset, count);
+                offset += count;
+
+            }
+         });
+
+    //    关键字 搜索
+        function search_by_keyword(keyword, offset, count){
+             $.post("http://127.0.0.1:5000/search_video", {offset: offset, count: count, keyword: keyword} , function(data,status){
+                if(status == "success"){
+                    var result = data.split(',');
+                    var len = result.length;
+                    var count = 0
+                    // result[len - 2] 循环次数
+                    //  result[len - 1] 余数
+                    // alert(result[len - 2] - 1)
+                    // alert(111);
+                    var string_append = "<tr>";
+                    for(var i = 0; i < count; i++){
+                        string_append += "<td> <video width=\"200\" height=\"300\" controls=\"controls\" preload=\"auto\">\n" +
+                            "                                     <source src=\"" + result[count] + "\" type=\"video/mp4\">\n" +
+                            "                                 </video></td>";
+                        count ++;
+                        }
+                    string_append += "</tr>"
+                    console.log(string_append);
+                    // alert(string_append);
+                    $("#table_video").append(string_append);
+                    alert(string_append)
+                }
+             });
+        }
+
+
+        $("#search").click(function (){
+            var keyword = $("#keyword").val();
+            // alert(keyword)
+            count = 5;
+            offset = 10;
+            for(var i=0; i< 10; i++){
+                search_by_keyword(keyword, offset, count)
+                offset = offset + count
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>

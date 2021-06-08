@@ -25,6 +25,7 @@ database = config.get("database", "database")  # 数据库
 ip_addr = config.get("database", "ip")  # 数据库
 avater_path = config.get("path", "avater_path")  # 头像保存路径
 show_path = config.get("path", "video_path")  # 视频保存路径
+search_video_path = config.get("path", "search_video_path")  # 视频保存路径
 
 
 connect_str = 'mysql+mysqlconnector://' + username + ':' + password + '@' + ip_addr + ':3306/' + database
@@ -111,7 +112,9 @@ def search_video():
     if request.method == "POST":
         keyword = request.form.get("keyword")
         # count = request.form.get("count")
-        xx = GetAndSave(get_json_interface(keyword=keyword, offset=offset, count=count), session=session)
+        print(keyword)
+        xx = GetAndSave(get_json_interface(keyword=keyword, offset=offset, count=count),
+                        session=session, video_path=search_video_path)
         result = xx.write_video_info()   # 下载 写入视频
 
         # 除去列表中的 []'
@@ -119,6 +122,9 @@ def search_video():
         result = result.replace("'", "")
         result = result.replace("[", "")
         result = result.replace("]", "")
+        print("搜索关键词的结果：", result)
+        return result
+    return None
 
 
 
