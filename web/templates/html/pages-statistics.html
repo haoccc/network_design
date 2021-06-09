@@ -230,6 +230,15 @@
                     </div>
                 </div>
             </div>
+
+             <div class="row">
+                <!-- Column -->
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div id="city_dis" style="width: 100%;height:500px;"></div>
+                    </div>
+                </div>
+            </div>
             <!-- ============================================================== -->
             <!-- End Projects of the Month -->
             <!-- ============================================================== -->
@@ -374,8 +383,12 @@
     $(document).ready(function () {
         $.get("http://127.0.0.1:5000/statistics", function (data, status) {
             // alert("数据: " + data + "\n状态: " + status);
+            var gender_dis;
+            var age_dis;
+            var post_time_dis;
+            var city_dis;
             if (status == "success") {
-                alert("ok");
+                // alert("ok");
                 user_count = data["用户数量"];
                 age_distribution = data["年龄分布"];
                 post_time_distribution = data["发布时间分布"];
@@ -383,6 +396,7 @@
                 // alert(gender_distribution[0])
                 video_count = data["视频数量"];
                 city_distribution = data["城市分布"];
+                alert(city_distribution[0][0]);
 
                 // 用户年龄分布
                 age_dis = {
@@ -487,9 +501,9 @@
                     },
                     yAxis: {
                         type: 'value',
-                        axisLabel: {
-                            formatter: '{value} W'
-                        },
+                        // axisLabel: {
+                        //     formatter: '{value}'
+                        // },
                         axisPointer: {
                             snap: true
                         }
@@ -519,18 +533,48 @@
                     },
                     series: [
                         {
-                            name: '用电量',
+                            name: '发帖量',
                             type: 'line',
                             smooth: true,
-                            data: [post_time_distribution[0], post_time_distribution[1], post_time_distribution[2], post_time_distribution[3], post_time_distribution[4], post_time_distribution[5], post_time_distribution[6], post_time_distribution[7], post_time_distribution[8], post_time_distribution[9], post_time_distribution[10], post_time_distribution[11], post_time_distribution[12], post_time_distribution[13], post_time_distribution[14], post_time_distribution[15], post_time_distribution[16], post_time_distribution[17], post_time_distribution[18] post_time_distribution[19], post_time_distribution[20], post_time_distribution[21], post_time_distribution[22], post_time_distribution[23]],
+                            data: [post_time_distribution[0], post_time_distribution[1],
+                                post_time_distribution[2], post_time_distribution[3], post_time_distribution[4],
+                                post_time_distribution[5], post_time_distribution[6], post_time_distribution[7],
+                                post_time_distribution[8], post_time_distribution[9], post_time_distribution[10],
+                                post_time_distribution[11], post_time_distribution[12], post_time_distribution[13],
+                                post_time_distribution[14], post_time_distribution[15], post_time_distribution[16],
+                                post_time_distribution[17], post_time_distribution[18], post_time_distribution[19],
+                                post_time_distribution[20], post_time_distribution[21], post_time_distribution[22],
+                                post_time_distribution[23]]
                         }
                     ]
-
                 }
                 echarts.init(document.getElementById('post_time_dis')).setOption(post_time_dis);
 
-
-
+                // 城市分布
+                city_dis = {
+                    xAxis: {
+                        type: 'category',
+                        data: [city_distribution[0][0], city_distribution[1][0], city_distribution[2][0],
+                            city_distribution[3][0], city_distribution[4][0], city_distribution[5][0],
+                            city_distribution[6][0], city_distribution[7][0], city_distribution[8][0],
+                            city_distribution[9][0]]
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [{
+                        data: [city_distribution[0][1], city_distribution[1][1], city_distribution[2][1],
+                            city_distribution[3][1], city_distribution[4][1], city_distribution[5][1],
+                            city_distribution[6][1], city_distribution[7][1], city_distribution[8][1],
+                            city_distribution[9][1]],
+                        type: 'bar',
+                        showBackground: true,
+                        backgroundStyle: {
+                            color: 'rgba(180, 180, 180, 0.2)'
+                        }
+                    }]
+                };
+                echarts.init(document.getElementById('city_dis')).setOption(city_dis);
             }
         });
     });
